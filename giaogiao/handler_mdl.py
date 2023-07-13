@@ -31,4 +31,6 @@ def handle(moudle, url, ip, port, thread_num):
         if '-' in port:
             for i in range(int(port.split('-')[0]), int(port.split('-')[1]) + 1):
                 pcollecter.port_scan(ip, port, thread_num)
+            else:
+                pcollecter.port_scan(ip, int(port), thread_num)
         print('端口扫描完成')
