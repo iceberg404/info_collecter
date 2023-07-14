@@ -20,7 +20,7 @@ def start():
     parser.add_argument('-u', '--url', dest='url', type=str, help='域名')
     parser.add_argument('-i', '--ip', dest='ip', type=str, help='ip或者ip范围')
     parser.add_argument('-p', '--port', dest='port', type=str, help='端口范围')
-    parser.add_argument('-t', '--thread', dest='thread', type=str, default=3, help='线程数默认3')
+    parser.add_argument('-t', '--thread', dest='thread', type=int, default=3, help='线程数默认3')
     moudle = parser.parse_args().moudle
     url = parser.parse_args().url
     ip = parser.parse_args().ip
